@@ -5,12 +5,20 @@ package inheritance;
 //인치(사이즈)
 //배터리 용량
 
-class SmartPhone {
+class SmartPhone2 {
 	int inch;
 	int capacity;
-	public SmartPhone(int inch,int capacity) {
+	public SmartPhone2(int inch,int capacity) {
 		this.inch = inch;
 		this.capacity = capacity;
+	}
+	
+	
+	public int getInch() {
+		return inch;
+	}
+	public int getcapacity() {
+		return capacity;
 	}
 	
 }
@@ -24,25 +32,25 @@ class SmartPhone {
 //기능
 //PrintDetails(): 스마트폰의 속성 정보 출력
 
-class SmartPhoneWithCamera extends SmartPhone{
+class SmartPhoneWithCamera2 extends SmartPhone2{
 	int resolution;
-	public SmartPhoneWithCamera(int inch, int capacity, int resolution) {
+	public SmartPhoneWithCamera2(int inch, int capacity, int resolution) {
 		super(inch,capacity);
 		this.resolution = resolution;
 	}
 	void printDetails() {
 		System.out.println("[결과값]");
-		System.out.println(inch + "인치");
-		System.out.println(capacity+ "mAh");
+		System.out.println(getInch() + "인치");
+		System.out.println(getcapacity()+ "mAh");
 		System.out.println(resolution+ "MP");
 	}
 }
 
-public class C02PracSmartPhone {
+public class C02PracSmartPhone2 {
 	public static void main(String[] args) {
 		//smartphonewithcamera 객체 생성
 		//인치, 배터용량, 카메라 해상도를 인수로 가짐
-		SmartPhoneWithCamera myPhone = new SmartPhoneWithCamera(6,4000,100);
+		SmartPhoneWithCamera2 myPhone = new SmartPhoneWithCamera2(6,4000,100);
 
 		myPhone.printDetails();
 		// [결과값]

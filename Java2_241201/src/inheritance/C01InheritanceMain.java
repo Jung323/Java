@@ -1,4 +1,5 @@
 package inheritance;
+
 class Parent{
 	int num1;
 	int num2;
@@ -26,7 +27,7 @@ class Child extends Parent{
 	
 	int num3;
 	public Child() {
-		//super() 		//생량
+		//super() 		//생략
 		System.out.println("[Child] : Defalut 생성자");
 	}
 	public Child(int num1) {
@@ -43,6 +44,8 @@ class Child extends Parent{
 		System.out.println("[Child] : num1, num2, num3 생성자");
 	}
 }
+
+
 
 public class C01InheritanceMain {
 	public static void main(String[]args) {
